@@ -1,14 +1,21 @@
 package 스터디1_2장;
 
-public class 날씨 {
-    private String[] 날씨종류 = new String[]{"맑음", "흐림", "비", "눈"};
-    private String 오늘의날씨;
+public class 날씨{
+    private 날씨종류[] 날씨종류배열 = new 날씨종류[5];
+    private 날씨종류 오늘의날씨;
 
-    public 날씨(String 오늘의날씨) {
-        this.오늘의날씨 = 오늘의날씨;
+    public 날씨() {
+        날씨종류배열[0] = 날씨종류.맑음;
+        날씨종류배열[1] = 날씨종류.흐림;
+        날씨종류배열[2] = 날씨종류.비;
+        날씨종류배열[3] = 날씨종류.눈;
+        날씨종류배열[4] = 날씨종류.미세먼지;
     }
 
-    public String[] 날씨종류를반환한다(){
-        return this.날씨종류;
+    public 날씨종류 오늘의날씨를조회한다() {
+        // 0 ~ 4 사이의 랜덤한 수를 반환한다.
+        오늘의날씨 = 날씨종류배열[(int)(Math.random() * 5)];
+
+        return 오늘의날씨;
     }
 }
